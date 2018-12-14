@@ -26,7 +26,7 @@
         </encoder>
         <!--输出格式增加，当前日志得输出线程  -->
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - [%X{appNo}] - (%file:%line\) - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level - [%X{appNo}] - %logger{50} - %msg%n</pattern>
         </layout>
     </appender>
     <root level="DEBUG">

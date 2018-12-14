@@ -1,3 +1,4 @@
+import com.you.logutil.LogUtil;
 import com.you.threadutil.ThreadUtil;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -18,8 +19,8 @@ public class ThreadTest {
     @Test
     public void threadTest(){
         ThreadUtil.pool.execute(()->{
-            logger.debug("==线程开始===");
+            LogUtil.debug(logger,"==线程开始bbb===");
         });
-        logger.debug("==线程结束===");
+        LogUtil.debug(logger,"==线程结束aa===");
     }
 }
