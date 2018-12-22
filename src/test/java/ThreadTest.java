@@ -1,8 +1,9 @@
-import com.you.logutil.LogUtil;
-import com.you.threadutil.ThreadUtil;
+import com.you.http.HttpUpFile;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
 
 /**
  * <一句话说明功能>
@@ -17,10 +18,11 @@ import org.slf4j.LoggerFactory;
 public class ThreadTest {
     private  Logger logger= LoggerFactory.getLogger(ThreadTest.class);
     @Test
-    public void threadTest(){
-        ThreadUtil.pool.execute(()->{
-            LogUtil.debug(logger,"==线程开始bbb===");
-        });
-        LogUtil.debug(logger,"==线程结束aa===");
+    public void threadTest() throws IOException {
+
+        HttpUpFile h =new HttpUpFile();
+        //h.download("http://img.zcool.cn/community/01f9ea56e282836ac72531cbe0233b.jpg@2o.jpg","",0,0);
+       h.download("http://f.hengkuaidai.com//mnt/img/hkd_07/07_22/07_22_579/20180415/20180415225106_jxccxwoa6x_appTh.png","",0,0);
+
     }
 }
